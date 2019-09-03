@@ -27,7 +27,7 @@ public class UserController {
 	@Autowired
 	private UserRepository userRepository;
 
-	// get all users
+	// get all users info
 	@GetMapping(value = "/alluser", produces = MediaType.APPLICATION_JSON_VALUE)
 	public List<User> getAllUsers() {
 		return userService.getAllUserInfo();
