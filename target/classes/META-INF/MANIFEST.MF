@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: rest-jpa-spring-boot
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: Dheeraj
+Implementation-Vendor-Id: com.sample.app
+Build-Jdk: 1.8.0_74
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/rest-jpa-spring-boot
+Created-By: Maven Integration for Eclipse
+
