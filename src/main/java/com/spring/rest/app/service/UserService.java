@@ -17,11 +17,30 @@ public class UserService {
 
 	public List<User> getAllUserInfo() {
 		List<User> userList = new ArrayList<>();
-		User userObj1 = new User("111", "User1");
-		User userObj2 = new User("222", "User2");
+		User userObj1 = new User("111", "User111");
+		User userObj2 = new User("222", "User222");
 		userList.add(userObj1);
 		userList.add(userObj2);
-		userRepository.save(userList);
+		userRepository.saveAll(userList);
 		return userRepository.findAll();
 	}
+
+	public User getUserById(String userId) {
+		return userRepository.findById(userId).orElse(null);
+	}
+
+	public User updateUserInfo(String userId, User users) {
+		User existingUserId = userRepository.findById(userId).orElse(null);
+		existingUserId.setUserId(users.getUserId());
+		existingUserId.setUserName(users.getUserName());
+		return userRepository.save(existingUserId);
+	}
+
+	public User createNewUser(User users) {
+		User objUser = new User();
+		objUser.setUserId(users.getUserId());
+		objUser.setUserName(users.getUserName());
+		return userRepository.save(objUser);
+	}
+
 }
